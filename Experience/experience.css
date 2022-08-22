@@ -1,0 +1,102 @@
+.text-center {
+    width: 1000px;
+    display:block;
+    margin:auto;
+ }
+
+ img {
+    width: 1920px;
+    position: fixed;
+}
+
+ .container {
+    width: 50vw;
+    min-width: 375px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.balloon{
+    display: block;
+    display: flex;
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0.801), rgba(255, 255, 255, 0.491), rgba(255, 255, 215, 0.622), rgba(207, 207, 255, 0.598), rgba(255, 255, 215, 0.622), rgba(255, 255, 255, 0.496),  white);
+    height: 50vw;
+    width: 70vw;
+    min-width: 300px;
+    max-height: 250px;
+    min-height: 200px;
+    margin: 0 auto 10px;
+    border-radius: 50px;
+    padding: 20px;
+    content: '';
+    text-align: center;
+    box-sizing: content-box;
+    margin-top: 140px;
+}
+
+button {
+    font-family: 'GangwonEduSaeeum_OTFMediumA';
+    position: absolute;
+    width: 10vw;
+    min-width: 100px;
+    height: 10vh;
+    top: 300px;
+    right: 50px;
+    border: 1px solid rgb(255 255 255 / 64%);
+    background-color: rgb(255 255 255 / 50%);
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.btn_c {
+    position: relative;
+}
+
+.btn {
+    position: relative;
+}
+
+.btn2 {
+    position: relative;
+}
+
+button:hover {
+    color: #fff8c0;
+    background: linear-gradient(38deg, #5eafe5bd, #9740bcd6);
+}
+
+#box{
+    font-family: 'GangwonEduSaeeum_OTFMediumA';
+    font-size: 1.9rem;
+    display: block;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    margin-top: 10px;
+
+}
+
+body {
+    background: url(ex_b.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#st_text {
+    font-family: 'InkLipquid';
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.714), #2b104d, #1b2d63, #163992, rgba(4, 0, 105, 0.707)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+

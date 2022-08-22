@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0 target-densityDpi=midium-dpi">
+    <title>Experience</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="experience.css">
+    <style>
+        @font-face {
+        font-family: 'GangwonEduSaeeum_OTFMediumA';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face {
+        font-family: 'InkLipquid';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="balloon">
+            <div id="box"><div id="st_text">My turning point</div></div>
+        </div>
+        <div class="btn_c">
+            <button id="btn">다음</button>
+        <a href="https://hwannow.github.io/Html-WEb/main/"><button id = "btn2">처음으로</button></a>
+    <script>
+        document.getElementById('btn2').style.visibility = 'hidden'
+        var ary = []
+        ary[0] = "여러분들은 친구와 크게 싸워, 끝내 연을 끊은 경험이 있나요?"
+        ary[1] = "고등학생 때까지만 해도 저는 친구들이 인생의 전부였어요."
+        ary[2] = "친구 한 명 한 명이 저에겐 너무나 소중했고, 최대한 갈등을 만들지 않으려고 노력했어요."
+        ary[3] = "몇몇 친구가 저를 함부로 대한다는 걸 알았지만, 애써 모른 척하며 관계를 유지했어요."
+        ary[4] = "제가 더 이상 그 친구의 태도를 받아들일 수 없었을 때, 우리의 관계는 거기서 끝이 났어요."
+        ary[5] = "관계가 끝났음에도, 온 신경이 그 친구와 싸웠던 그날에 멈춰 있었어요."
+        ary[6] = "보다 못한 선생님께서 저에게 책 한 권을 추천해 주셨어요."
+        ary[7] = "저는 평소 책을 즐겨 읽는 사람이 아니기 때문에 처음엔 달갑지 않았어요."
+        ary[8] = "그렇지만, 제목의 ‘달라지는 것들’에서 멈춰 있는 나 자신이 좀 달라지길 원했어요."
+        ary[9] = "책의 내용인 마음챙김법은 거창한 무언가도 아니었고, 준비물이 필요한 것도 아니었어요."
+        ary[10] = "아침에 눈을 뜨면, 들숨 4초, 날숨 7초를 5번 정도 반복했어요."
+        ary[11] = "호흡하는 동안은 현재에 집중하면서 잡념을 떨쳐낼 수 있었고, 모든 일에 대한 걱정과 스트레스가 줄었어요."
+        ary[12] = "또한 과거에 얽매이지 않게 되어 전보다 좋은 성적도 받을 수 있게 되었어요."
+        ary[13] = "지금까지도 4-7 호흡법을 실천하면서 현재에 집중하려 노력하고 있어요."
+        ary[14] = "이 책은 저와 비슷한 경험을 하신 분들께 추천해 드리고 싶어요."
+        ary[15] = "책의 내용을 따라가다 보면 어느 순간 바뀐 자신을 발견할 수 있을 거예요."
+    
+        var ebutton = document.getElementById('btn')
+        ebutton.addEventListener('click', func)
+        var dv = document.getElementById('box')
+        var flag = 0
+        var index = 0
+        var timer
+        var check = -1
+
+        function func(){
+            dv.innerHTML = ""
+            if (check != flag) {
+                timer = setInterval(function () {
+                    typing()
+                }, 100)
+                check = flag
+            }
+            else {
+                clearInterval(timer);
+                index = 0;
+                dv.textContent += ary[flag].slice(index,)
+                flag++
+            }
+
+            if (flag == 16) {
+                document.getElementById('btn').style.visibility = 'hidden'
+                document.getElementById('btn2').style.visibility = 'visible'
+            }
+        }
+        function typing() {
+            if (index == ary[flag].length) {
+                clearIntercal(timer);
+                index = 0;
+                flag++
+            }
+            else{
+                dv.textContent += ary[flag][index++]
+            }
+        }
+    </script>
+    </div>
+    </div>
+</body>
+</html>

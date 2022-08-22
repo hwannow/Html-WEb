@@ -1,0 +1,272 @@
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    display: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.container {
+    margin-top: 10rem;
+    width: 50vw;
+    min-width: 375px;
+    background-color: rgba( 255, 255, 255, 0);
+    text-align: center;
+}
+.start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position-x: center;background-image: url(b2.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+}
+
+
+.title1 {
+    color: #ffffff;
+    text-shadow: 5px 5px 5px #373737;
+    font-family: 'ulsanjunggu';
+    box-sizing: border-box;
+    font-size: 3rem;
+
+}
+.title2 {
+    color: #ffffff;
+    text-shadow: 5px 5px 5px #373737;
+    font-family: 'ulsanjunggu';
+    box-sizing: content-box;
+    font-size: 3rem;
+}
+
+.start-btn {
+    margin-top: 50px;
+    height: 5rem;
+    width: 10rem;
+    background-color: #55C0F6;
+    border: 4px solid #ffffff;
+    border-radius: 40px;
+    font-size: 30px;
+    font-family: 'Mago';
+    font-weight:bold;
+    font-size: 1.5rem;
+    color: #373737;
+}
+
+.result{
+    display: none;
+    margin-bottom: 300px;
+    background-color: rgba( 255, 255, 255, 0.65);
+    border-radius: 20px;
+
+}
+
+.result article {
+    margin: 40px;
+}
+
+#img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.kindness {
+    display: none;
+}
+.RAIN{
+    display: none;
+}
+.three{
+    display: none;
+}
+.fourseven{
+    display: none;
+}
+.mini{
+    display: none;
+}
+
+h2#animal {
+    border: 2px solid rgb(163, 202, 255);
+    background-color: #ffffff;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 15px;
+    font-family: 'ACCchildrenheartOTF-Regular';
+}
+
+article.mt-5 {
+    font-family: 'Mago';
+    text-align: center;
+}
+
+h2#meditation {
+    background-color: #ffffff87;
+    font-family: 'ACCchildrenheartOTF-Regular';
+    margin: 60px;
+    margin-bottom: 0;
+    border-radius: 10px;
+}
+
+article.kindness {
+    font-family: 'ACCchildrenheartOTF-Regular';
+}
+
+article.RAIN {
+    font-family: 'ACCchildrenheartOTF-Regular';
+}
+article.three {
+    font-family: 'ACCchildrenheartOTF-Regular';
+}
+
+article.fourseven {
+    font-family: 'ACCchildrenheartOTF-Regular';
+}
+article.mini {
+    font-family: 'ACCchildrenheartOTF-Regular';
+}
+
+.dolphin{
+    display: none;
+}
+
+.lion{
+    display: none;
+}
+.panda {
+    display: none;
+}
+.pig {
+    display: none;
+}
+.coala{
+    display: none;
+}
+.octopus{
+    display: none;
+}
+.hamster{
+    display: none;
+}
+.chick{
+    display:none;
+}
+.monkey {
+    display: none;
+}
+.cat {
+    display: none;
+}
+.rabbit {
+    display: none;
+}
+.tiger {
+    display: none;
+}
+.cow {
+    display: none;
+}
+.dog {
+    display: none;
+}
+.fox{
+    display: none;
+}
+.bear {
+    display: none;
+}
+
+html{
+    background: url(b1.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.progress {
+    border-radius: 50px;
+}
+
+.progress-bar {
+    border-radius: 50px;
+    background-color: rgba(40, 95, 198, 0.9);
+}
+
+#title{
+    font-size: 1.7rem;
+    font-family: 'GangwonEdu_OTFBoldA';
+    text-align: center;
+}
+
+#A {
+    font-size: 17px;
+    font-family: 'ACCchildrenheartOTF-Regular';
+    border-radius: 50px;
+    background-color: rgba(40, 95, 198, 0.9);
+    border-color: #ffffff;
+    border-width: 1.5px;
+
+}
+
+#B {
+    font-size: 17px;
+    font-family: 'ACCchildrenheartOTF-Regular';
+    border-radius: 50px;
+    background-color: rgba(40, 95, 198, 0.9);
+    border-color: #ffffff;
+    border-width: 1.5px;
+}
+
+.h2-box h2 {
+    margin: 0;
+    margin-top: 3rem;
+    font-family: 'GangwonEdu_OTFBoldA';
+    color: #4aaff1;
+
+}
+
+.h2-box{
+    border-top: 12px solid rgba(170, 207, 239, 0.5);
+}
+
+.test {
+    background-color: #6fbaf430;
+    border-radius: 10px;
+    line-height: 1.8;
+    margin: 10px;
+    margin-top: 0;
+}
+
+.test_text {
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.result h2 {
+    font-family: 'GangwonEdu_OTFBoldA';
+    color: #216ea0;
+}
+
+.home_btn {
+    width: 10rem;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    border: 1.5px solid #97d6ff;
+    border-radius: 40px;
+    font-size: 30px;
+    font-family: 'Mago';
+    font-weight:bold;
+    font-size: 1.5rem;
+    color: #373737;
+}

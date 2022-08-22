@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0 target-densityDpi=midium-dpi">
+    <title>나의 명상법 찾기</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       @font-face {
+    font-family: 'ulsanjunggu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    @font-face {
+    font-family: 'Mago';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_07@1.0/Mago.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'ACCchildrenheartOTF-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112-2@1.0/ACCchildrenheartOTF-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    </style>
+    <script>
+        function play(){
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+</head>
+<body class="container">
+        <audio src="bgm.mp3" id = "audio"></audio>
+        <article class="start mt-5 mb-5 ml-5 mr-5"> <!--시작 화면 부분 / 시작 버튼을 누르면 질문 화면으로 넘어감-->
+            <h1 class="mt-5 title1">나의</h1>
+            <h1 class="title2">명상 방법</h1>
+            <button type="button" class="start-btn" onclick ="start(); play()">시작하기</button>
+        </article>
+    <article class = "question"> <!--질문 화면 부분-->
+        <div class="progress mt-4 ml-3 mr-3">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+        </div>
+        <h2 id ="title" class = "text-center mt-5 ">문제</h2>
+        <input id = "type" type="hidden" value="Too_Much_Think">
+        <button id="A" type="button" class="btn btn-primary mt-5 ml-3 mr-3">Primary</button>
+        <button id="B" type="button" class="btn btn-primary mt-5 mb-5 ml-3 mr-3">Primary</button>
+    </article>
+    <article class="result"> <!--결과 화면 부분-->
+        <h2 class = "text-center mt-5">나와 닮은 동물은 ?</h2>
+        <img id ="img" class="mt-5" src="lion.jpg" alt="animal">
+        <article class="dolphin mt-5">
+            <h4>회피력 만렙 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">돌고래</strong> 예요.<br>일에 문제가 생기면 끝까지 모르는 척하지만 속으로는 누구보다 잘 알고 있어요. 계획한 것이 내 마음대로 흘러가지 않을 때가 많아요. ‘다음 번엔 더 잘해야지’ 라고 생각하지만 똑같은 실수를 반복해요.</h4>
+        </article>
+        <article class = "lion mt-5">
+            <h4>아빠 같은 듬직함의 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">사자</strong> !<br>책임감이 강하고 문제는 체계적으로 해결하려 해요. 주변 사람들을 잘 챙기고 일에 문제가 생기면 하루 종일 그 생각만 하며 자책해요. 하지만 금방 해결해내고 주변인들이 고마워해요.</h4>
+        </article>
+        <article class = "panda mt-5">
+            <h4>소심함의 끝판왕 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">판다</strong> 예요.<br>잡생각도 많고 자책도 많은 편이라 문제가 생기면 하루 종일 그 문제만 생각나요. 그렇다고 문제를 해결하기 위해 적극적으로 계획을 세우진 않아요. 시간이 해결해 주기를 바래요.</h4>
+        </article>
+        <article class = "pig mt-5">
+            <h4>반전 매력! <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">돼지</strong> 예요.<br>별 생각 없고 계획 없이 살아서 항상 행복하게 사는 것 같지만, 별것 아닌 일에도 자책해요. 하지만 금방 회복하고 다시 기분이 좋아져요. 생각 없이 일을 벌리고 도망가기 일쑤예요.</h4>
+        </article>
+        <article class = "coala mt-5">
+            <h4>모범생 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">코알라</strong> 예요.<br>일을 처리하는 요령은 없지만 항상 열심히 해서 어른들의 예쁨을 많이 받아요. 게으른 사람 중에서 제일 계획적인 사람이에요. 가끔은 혼자만의 힐링 시간이 필요해요.</h4>
+        </article>
+        <article class = "octopus mt-5">
+            <h4>행복한 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">문어</strong> 예요.<br>문제가 생겨도 긍정적인 측면에서 바라봐요. 하지만 너무 긍정적으로 생각해 문제가 커질 때가 종종 있어요. 언제나 밝은 에너지를 내뿜어 주변 사람들까지 기분이 좋아져요.</h4>
+        </article>
+        <article class = "hamster mt-5">
+            <h4>저돌적인 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">햄스터</strong> 예요.<br>한 가지 일에 꽂히면 그것에만 몰두해요. 미래보다는 현재가 더 중요해서 현재에 충실한 삶을 살지만, 가끔 미래의 멋진 나를 상상해요. 앞뒤 안 가리는 저돌적인 성격이어도, 할 건 하고 놀아요.</h4>
+        </article>
+        <article class = "chick mt-5">
+            <h4>긍정의 아이콘 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">병아리</strong> 예요.<br>문제가 생기면 자책하다가도 금방 털어 버리고 회복해요. 언제나 행복하다기보다는 불행 중에서 행복을 잘 찾아요. 문제가 생기면 일부러 무시하는 경향이 있어요.</h4>
+        </article>
+        <article class = "monkey mt-5">
+            <h4>교묘한 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">원숭이</strong> 예요.<br>자기가 하기 싫은 일은 절대 하지 않아요. 문제가 생기면 ‘누군가 해결해 주겠지’ 하며 요리조리 피해 다녀요. 매사에 불평불만이 많아서 새로운 일을 시작할 때면 궁시렁거리기 일쑤예요.</h4>
+        </article>
+        <article class = "cat mt-5">
+            <h4>도도함의 정석, <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">고양이</strong> 예요.<br>계획을 갖고 일을 시작하지만 계획대로 되지 않을 때가 많아요. 그럴 때 자책하진 않지만, 문제를 회피하는 경향이 있어요. 분명 나는 계획이 있지만 주변 사람들은 믿어 주지 않아요.</h4>
+        </article>
+        <article class = "rabbit mt-5">
+            <h4>빈틈없는 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">토끼</strong> 예요.<br>책임감이 강해서 맡은 일은 끝까지 완수해내요. 계획 세우는 것을 좋아하고, 계획대로 되지 않으면 화가 나요. 처음 보는 사람들은 다가가기 힘든 아우라가 있어요.</h4>
+        </article>
+        <article class = "tiger mt-5">
+            <h4>뭐든지 철저하게 해내는 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">호랑이</strong> 예요.<br>실수는 용납하지 않는 성격 때문에 모든 일을 완벽하게 하려고 해요. 일이 틀어지면 금방 자책하기 마련이에요. 하지만 회복하는 속도가 빨라서 다시 일어나는 것도 빨라요.</h4>
+        </article>
+        <article class = "cow mt-5">
+            <h4>언제나 예스맨 ! <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">소</strong> 예요.<br>거절하기를 어려워해 친구들의 부탁은 거의 들어주는 편이에요. 친구들의 부탁으로 자신의 일에 소홀해질 때도 있어요. 가끔은 거절하고 싶을 때도 있지만, 친구들이 고마워하는 모습을 보면 뿌듯해져요.</h4>
+        </article>
+        <article class = "dog mt-5">
+            <h4>순수 그 자체 ! <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">강아지</strong> 예요.<br>계획이 없고, 문제가 생기면 회피하기 바빠요. 하지만 잡생각이 없고, 자책도 하지 않는 좋은 습관을 가지고 있어요. 주위에서 걱정 없이 사는 것 같다는 소리를 많이 들어요.</h4>
+        </article>
+        <article class = "fox mt-5">
+            <h4>자존감 높은 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">여우</strong> 예요.<br>문제가 생기면 차근차근 풀어나가는 능력이 뛰어나요. 문제의 원인을 찾기 보다는 해결에 집중해요. 그냥 보면 타인에게 무관심해 보이지만 실은 속이 깊은 사람이에요.</h4>
+        </article>
+        <article class = "bear mt-5">
+            <h4>책임감이 강한 <strong style="color: rgb(18, 11, 72); font-size: 1.8rem;">곰</strong> !<br>계획 없이 일을 시작하지만 결과는 좋을 때가 많아요. 문제가 생기면 해결하려 노력하고 잡생각이 없는 편이에요. 의외로 듬직한 면이 있어서 주변인들이 자주 의지해요.</h4>
+        </article>
+        <div class="h2-box">
+            <h2>나에게 맞는 명상법은?</h2>
+        </div>
+        <h2 id="meditation" class = "text-center mt-5">명상 이름</h2>
+        <h3 id ="explain" class = "text-center"></h3> <!--명상 설명-->
+        
+    <article class="kindness">
+
+            <div class="test">
+            <div class="test_text">
+            <br>편안하게 앉거나 눕는다.
+            <br>눈을 완전히 감거나 살짝 뜬다.
+            <br>온전히 나를 위한 시간임을 인식한다. 이 시간을 소중히 여기고 보호한다.
+            <br>내 몸에서 느껴지는 감각을 인지한다.
+            <br>
+            <br>심호흠을 하고 나를 괴롭히는 문제나 사건이나 상황 한 가지를 떠올려 본다.
+            <br>이것을 생각했을 때 내 몸이 어떻게 반응하는지 확인한다.
+            <br>
+            <br>몸에서 느껴지는 감각에 내 몸을 맡긴 채, 그 상태를 유지한다.
+            <br>
+            <br>느껴지는 감각을 무시하거나 외면하지 않고 그대로 받아들인다.
+            <br>
+            <br>나에게 '이건 정말 어려운 문제야. 난 지금 무척 힘든 시간을 보내고 있어' 라고 속삭인다.
+            <br>감각을 수용하고 위로의 시간은 충분히 느낀다.
+            <br>누구나 이런 힘든 문제에 부딪칠 수 있음을 인정한다.
+            <br>
+            <br>이런 일은 나만 겪는 문제가 아니라고 스스로에게 말한다. '다른 사람들도 나와 비슷한 경험을 해. 누구나 인생을 살며 겪을 수 있는 문제야.'
+            <br>
+            <br>위로의 말을 충분히 의미하면서 다시 그 문제를 떠올려 본다. 
+            <br>아무것도 평가하거나 판단하지 않는다.
+            <br>
+            <br>여전히 그 문제가 내 탓이라고 여겨지는가?
+            <br>
+            <br>비슷한 상황에서 친구에게 하듯 나 자신에게 친절한 응원의 메시지를 보낸다. 
+            <br>'내가 있잖아. 네 옆에 있어 줄게.'
+            <br>
+            <br>편안한 방식으로 나 자신을 만져 준다. 가슴에 손을 얹어도 좋고 두 팔로 감싸 안아도 좋다.
+            <br>
+            <br>언제든지 같은 명상을 반복할 수 있다는 사실을 기억하자.
+            <br>
+            <br>명상이 필요한 순간마다 친절한 태도를 스스로 돌아보기로 하며 천천히 눈을 뜬다.
+            <br>
+            <br>
+            </div>
+            </div>
+
+    </article>
+    <article class="RAIN">
+        <div class="test">
+            <div class="test_text">
+            <br>지금 일어나고 있는 일은 인식한다.
+            <br>
+            <br>있는 그대로의 상태를 허락한다.
+            <br>
+            <br>친절하고 부드럽게 탐색한다.
+            <br>
+            <br>자기 자비를 통해 성장한다.
+            <br>
+            <br>지금 이 순간에 집중하면서 열린 의식 상태를 유지한다.
+            <br><br>
+            </div>
+        </div>
+    </article>
+    <article class="three">
+        <div class="test">
+            <div class="test_text">
+            <br>편안하고 바른 자세로 앉는다.
+            <br>눈은 감거나 뜬다. 
+            <br>숨을 길게 들이마시고 내뱉는다.
+            <br>
+            <br>스스로에게 묻는다. '나는 지금 무엇을 경험하고 있는가? 
+            <br>어떤 감정과 생각, 신체의 감각이 느껴지는가?' 
+            <br>차분하게 답을 기다려 보자.
+            <br>
+            <br>이후 떠오르는 모든 감정과 생각, 감각을 명명해 보자.
+            <br>
+            <br>설사 내가 원하지 않는 썩 유쾌하지 않는 것들일지라도
+            <br>의식 속에 떠오르는 모든 것을 기꺼이 받아들이자.
+            <br>
+            <br>모든 신경을 호흡에만 집중해 보자.
+            <br>
+            <br>호흡은 마음챙김을 실천하는 매개체다. 
+            <br>들숨과 날숨, 하나하나 호흡에 집중하자.
+            <br>
+            <br>수면 위 생각의 파도 바로 밑에는 항상 고요한 정적이 자리한다.
+            <br>
+            <br>내 모든 주파수를 그 정적에 맞추고, 이제 인식의 범위를 넓혀 보자. 
+            <br>여러분의 자세, 얼굴의 근육.
+            <br>
+            <br>양손의 감각을 느껴 보자. 
+            <br>모든 긴장을 끈을 완전히 놓는다.
+            <br>
+            <br>그리고 지금 이 순간이 우리 생의 유일한 순간이라는 생각으로
+            <br>나라는 존재 자체를 지금 여기에 완전히 맡겨 버린다.
+            <br>
+            <br>이 과정을 3분간 지속해 본다.
+            <br>
+            <br>
+            </div>
+        </div>
+    </article>
+    <article class="fourseven">
+        <div class="test">
+            <div class="test_text">
+            <br>눈을 감아도 좋고 떠도 좋다.
+            <br>
+            <br>편안하면서도 바른 자세를 취한다.
+            <br>
+            <br>호흡에 신경을 집중한다.
+            <br>
+            <br>4초 동안 숨을 들이쉬며 호흡에 집중한다.
+            <br>
+            <br>7초 동안 숨을 내쉬며 호흡에 집중한다.
+            <br>
+            <br>위 순서로 1~2분씩, 틈날 때마다 반복한다.
+            <br>
+            <br>
+            </div>
+        </div>
+    </article>
+    <article class="mini">
+        <div class="test">
+            <div class="test_text">
+            <br>일정한 시간을 정해도 되고 틈나는 시간에 자유롭게 해도 된다.
+            <br>
+            <br>눈은 감지 않는다.
+            <br>
+            <br>모든 정신을 호흡의 감각에 집중한다.
+            <br>
+            <br>콧구멍, 가슴, 배 어디든 상관없다. 가장 편안한 감각을 선택해 집중한다.
+            <br>
+            <br>이런 식으로 세 차례 호흡을 반복한다. 시간이 날 때마다 똑같이 반복한다.
+            <br>
+            <br>그 느낌을 즐겨보자.
+            <br>
+            <br>
+            </div>
+        </div>
+    </article>
+    <a href="https://hwannow.github.io/Html-WEb/main/"><button class="home_btn">처음으로</button></a>
+</article>
+    <input type="hidden" id ="Too_Much_Think" value = "0">
+    <input type="hidden" id ="Plan" value = "0">
+    <input type="hidden" id ="Blame_Oneself" value = "0">
+    <input type="hidden" id ="Avoid_Problem" value = "0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script>
+        var num = 1;
+        var q = {
+            1: {"title" : "책 읽을 때", "type":"Too_Much_Think", "A":"책에 집중 못하고 딴생각 하기", "B":"오로지 책에만 열중해서 다 읽기"},
+            2: {"title" : "공부를 시작하려고<br>마음먹었을 때", "type":"Plan", "A":"플래너 작성 후 공부 시작하기", "B":"눈 앞에 보이는 문제집 닥치는 대로 풀기"},
+            3: {"title" : "내가 조장인 팀의 팀플 보고서<br>점수가 망했을 때", "type":"Blame_Oneself", "A":"조장인 내 잘못이라 생각하기", "B":"팀원이 의견을 안 내서 망했다고 생각하기"},
+            4: {"title" : "기말고사가 3일 남았을 때", "type":"Avoid_Problem", "A":"포기하고 놀러 다니기", "B":"벼락치기라도 하기"},
+            5: {"title" : "선생님께서 혼내실 때", "type":"Too_Much_Think", "A":"한귀로 듣고 한귀로 흘리기", "B":"내가 잘못했음을 인정하고 반성하기"},
+            6: {"title" : "나는 연인에게 <br>서운한 점이 있을 때", "type":"Plan", "A":"생각 정리 후 문자로 편지 전달하기", "B":"지금 당장 만나서 얼굴 보고 얘기하기"},
+            7: {"title" : "상대가 답장이 늦을 때", "type":"Blame_Oneself", "A":"'내가 뭐 실수한 거 있나?' 되돌아 보기", "B":"'바쁜가 보지' 하며 넘어가기"},
+            8: {"title" : "소개팅에서 상대가<br>마스크를 벗었는데 취향이 아닐 때", "type":"Avoid_Problem", "A":"바로 집에 가기", "B":"외모보단 성품을 중요시 여기기"},
+            9: {"title" : "친구와 싸운 후 시간이<br>지났을 때", "type":"Too_Much_Think", "A":"하루 종일 친구와 싸운 일만 생각하기", "B":"대수롭지 않게 여기고 다른 일 하기"},
+            10: {"title" : "문제를 해결해야 할 때", "type":"Plan", "A":"눈을 감고 문제의 원인에 대해 생각하기", "B":"눈을 뜨고 주변을 둘러보면서 머리 식히기"},
+            11: {"title" : "친구와 싸울 때", "type":"Blame_Oneself", "A":"내가 먼저 사과하기", "B":"화내면서 상대방 잘못 지적하기"},
+            12: {"title" : "친구들한테 성격을 고치라는<br>지적을 많이 받았을 때", "type":"Avoid_Problem", "A":"나만의 개성으로 여기고 무시하기", "B":"남들이 불편하다니까 고치기"},
+        }
+        
+        var result = {
+            "OOOO" : {"meditation" : "친절명상", "explain": "친절명상 설명", "img" : "돌고래.png", "animal" : "돌고래",},
+            "OOOX" : {"meditation" : "친절명상", "explain": "친절명상 설명", "img" : "사자.png", "animal" : "사자"},
+            "OOXO" : {"meditation" : "3분호흡명상", "explain": "3분호흡명상 설명", "img" : "원숭이.png", "animal" : "원숭이"},
+            "OOXX" : {"meditation" : "미니명상", "explain": "미니명상 설명", "img" : "여우.png", "animal" : "여우"},
+            "OXOO" : {"meditation" : "친절명상", "explain": "친절명상 설명", "img" : "판다.png", "animal" : "판다"},
+            "OXOX" : {"meditation" : "RAIN명상", "explain": "RAIN명상 설명", "img" : "코알라.png", "animal" : "코알라"},
+            "OXXO" : {"meditation" : "RAIN명상", "explain": "RAIN명상 설명", "img" : "문어.png", "animal" : "문어"},
+            "OXXX" : {"meditation" : "RAIN명상", "explain": "RAIN명상 설명", "img" : "햄스터.png", "animal" : "햄스터"},
+            "XOOO" : {"meditation" : "RAIN명상", "explain": "RAIN명상 설명", "img" : "병아리.png", "animal" : "병아리"},
+            "XOOX" : {"meditation" : "4-7호흡명상", "explain": "4-7호흡명상 설명", "img" : "호랑이.png", "animal" : "호랑이"},
+            "XOXO" : {"meditation" : "3분호흡명상", "explain": "3분호흡명상 설명", "img" : "고양이.png", "animal" : "고양이"},
+            "XOXX" : {"meditation" : "3분호흡명상", "explain": "3분호흡명상 설명", "img" : "토끼.png", "animal" : "토끼"},
+            "XXOO" : {"meditation" : "친절명상", "explain": "친절명상 설명", "img" : "돼지.png", "animal" : "돼지"},
+            "XXOX" : {"meditation" : "4-7호흡명상", "explain": "4-7호흡명상 설명", "img" : "소.png", "animal" : "소"},
+            "XXXO" : {"meditation" : "미니명상", "explain": "미니명상 설명", "img" : "강아지.png", "animal" : "강아지"},
+            "XXXX" : {"meditation" : "미니명상", "explain": "미니명상 설명", "img" : "곰.png", "animal" : "곰"},
+            
+        }
+        function start() {
+            $(".start").hide();
+            $(".question").show();
+            
+            next();
+        }
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        $("#B").click(function(){
+            next();
+        });
+        function next() {
+            if (num == 13) { //테스트가 끝났을 때
+                $(".question").hide();
+                $(".result").show();
+                var mbti = "";
+                $("#Too_Much_Think").val() >= 2 ? mbti += "O" : mbti += "X";
+                $("#Plan").val() >= 2 ? mbti += "O" : mbti += "X";
+                $("#Blame_Oneself").val() >= 2 ? mbti += "O" : mbti += "X";
+                $("#Avoid_Problem").val() >= 2 ? mbti += "O" : mbti += "X";
+                alert("잠시만 기다려 주세요...");
+                $("#animal").html(result[mbti]["animal"]);
+                $("#img").attr("src", result[mbti]["img"]);
+                $("#meditation").html(result[mbti]["meditation"]);
+                if (mbti == "OOOO" || mbti == "OOOX" || mbti == "OXOO" || mbti == "XXOO") {
+                    if (mbti == "OOOO")
+                        $(".dolphin").show();
+                    else if (mbti == "OOOX")
+                        $(".lion").show();
+                    else if (mbti == "OXOO")
+                        $(".panda").show();
+                    else
+                        $(".pig").show();
+                    $(".kindness").show();
+                }
+                else if (mbti == "OXOX" || mbti == "OXXO" || mbti == "OXXX" || mbti == "XOOO") {
+                    if (mbti == "OXOX")
+                        $(".coala").show();
+                    else if (mbti == "OXXO")
+                        $(".octopus").show();
+                    else if (mbti == "OXXX")
+                        $(".hamster").show();
+                    else
+                        $(".chick").show();
+                    $(".RAIN").show();
+                }
+                else if (mbti == "OOXO" || mbti == "XOXO" || mbti == "XOXX"){
+                    if (mbti == "OOXO")
+                        $(".monkey").show();
+                    else if (mbti == "XOXO")
+                        $(".cat").show();
+                    else
+                        $(".rabbit").show();
+                    $(".three").show();
+                }
+                else if (mbti == "XOOX" || mbti == "XXOX") {
+                    if (mbti == "XOOX")
+                        $(".tiger").show();
+                    else
+                        $(".cow").show();
+                    $(".fourseven").show();
+                }
+                else {
+                    if (mbti == "OOXX")
+                        $(".fox").show();
+                    else if (mbti == "XXXO")
+                        $(".dog").show();
+                    else
+                        $(".bear").show();
+                    $(".mini").show();
+                }
+            }
+            else{ //테스트 진행
+                $(".progress-bar").attr("style", "width: calc(100/12*"+num+"%");
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++; 
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0 target-densityDpi=midium-dpi">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="merit.css">
+    <title>Document</title>
+    <style>
+        @font-face {
+    font-family: 'designhouseOTFLight00';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/designhouseOTFLight00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        @font-face {
+        font-family: 'JGaegujaengyi-Medium-KO';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/JGaegujaengyi-Medium-KO.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class = "title">
+        <h2><strong>독서의 이점</strong></h2>
+    </div>
+    <div style="padding-left: 50px; padding-right: 50px;" class = "title">
+        <h5>네개의 이점을 모두 읽어주세요 !</h5>
+    </div>
+    <div class="pa">
+        <div class = "parent"> 
+            <div class = "child">
+                <button style="color: rgb(18, 74, 124);" class = "btn" id = "btn1" onclick = 'toggleBtn1()'>기억력 상승</button>
+            </div>
+            <div class = "child">
+                <button style="color: rgb(18, 74, 124);" class = "btn" id = "btn2" onclick = 'toggleBtn2()'>어휘력 향상</button>
+            </div>
+        </div>
+        <div class = "parent1">
+            <div class = "child">
+                <button style="color: rgb(18, 74, 124);" class = "btn" id = "btn3" onclick = 'toggleBtn3()'>간접 경험</button>
+            </div>
+            <div class = "child">
+                <button style="color: rgb(18, 74, 124);" class = "btn" id = "btn4" onclick = 'toggleBtn4()'>공감 능력 향상</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class = "parent">
+        <div class = "merit" id = "merit1" style = "display: none;">
+            <div style="margin-top:9px">
+                독서를 하면 배경, 등장 인물, 세부 사항,<br>특정 상황 등을 기억하도록 두뇌를 훈련시켜서 일상 생활의 모든 데이터를 암기하는 능력이 강화돼요. 또한 책 속 풍경과 소리, 사람의 얼굴이나 모습, 향기 등을 상상하면 마치 실체 경험처럼 대뇌에 있는 전두엽이 자극돼 두뇌 트레이닝 효과가 나타나기도 해요.
+            </div>
+        </div>
+        <div class = "merit" id = "merit2" style = "display: none;">
+            <div style="margin-top:7px">
+                책을 많이 읽을수록 더 많은 단어에 노출되면서 그 의미를 배우고, 반복적으로 시각화 하면 자동적으로 어휘력이 늘어나요. 또한 구문을 크게 향상해 의견을 더 명확하게 표현할 수 있도록 도와주며 정기적으로 책을 꾸준히 읽는 사람들은 그렇지 않은 사람들보다 철자 오류가 훨씬 적다는 연구 결과가 있어요.
+            </div>
+        </div>
+        <div class = "merit" id = "merit3" style = "display: none;">
+            <div style="margin-top:20px">
+                자기 개발서로 예를 들면, 책에는 저자들이<br>성공했던 일, 실패를 극복하였던 일 등, 수많은 경험이 있고 수년에 걸친 연구를 통해 삶을 살아가는 효과적인 방법을 설명해 줘요. 이것들을 간접적으로 흡수한다면 성공으로 가는 길이 더 수월해질 거예요.
+            </div>
+        </div>
+        <div class = "merit" id = "merit4" style = "display: none;">
+            <div style="margin-top:15px">
+                문학 분야의 책이라면 책을 읽을 때 등장<br>인물의 경험을 간접적으로 느끼게 되고 독자는 그들의 눈으로 세상을 보게 돼요. 이러한 것은 실생활에서 다른 사람들과 공감할 수 있는 능력을 강화하고 다양한 상황과 경험에 대해 더 열린 마음을 갖고 받아들일 수 있게 해 줘요.
+            </div>
+        </div>
+    </div>
+    <div>
+        <a href="https://hwannow.github.io/Html-WEb/main/"><button id = "toMain" style = "display: none;">처음으로</button></a>
+    </div>
+
+
+    <script language = "javascript">
+        var number = '0';
+        const cntCk = document.getElementById('toMain');
+        var ck1 = 0, ck2 = 0, ck3 = 0, ck4 = 0, cnt = 0;
+        function toggleBtn1() {
+            const merit = document.getElementById('merit1');
+            if(merit.style.display !== 'none') {
+                merit.style.display = 'none';
+                number = '0';
+            }
+            else {
+                if (number != '0') {
+                    var tmp = "merit" + number;
+                    const trash = document.getElementById(tmp);
+                    trash.style.display = 'none';
+                }
+                if (ck1 == 0) {
+                    ck1 = 1;
+                    cnt++;
+                }
+                merit.style.display = 'block';
+                number = '1';
+            }
+            if (cnt == 4) {
+                cntCk.style.display = 'block';
+            }
+        }
+        function toggleBtn2() {
+            const merit = document.getElementById('merit2');
+            if(merit.style.display !== 'none') {
+                merit.style.display = 'none';
+                number = '0';
+            }
+            else {
+                if (number != '0') {
+                    var tmp = "merit" + number;
+                    const trash = document.getElementById(tmp);
+                    trash.style.display = 'none';
+                }
+                if (ck2 == 0) {
+                    ck2 = 1;
+                    cnt++;
+                }
+                merit.style.display = 'block';
+                number = '2';
+            }
+            if (cnt == 4) {
+                cntCk.style.display = 'block';
+            }
+        }
+        function toggleBtn3() {
+            const merit = document.getElementById('merit3');
+            if(merit.style.display !== 'none') {
+                merit.style.display = 'none';
+                number = '0';
+            }
+            else {
+                if (number != '0') {
+                    var tmp = "merit" + number;
+                    const trash = document.getElementById(tmp);
+                    trash.style.display = 'none';
+                }
+                if (ck3 == 0) {
+                    ck3 = 1;
+                    cnt++;
+                }
+                merit.style.display = 'block';
+                number = '3';
+            }
+            if (cnt == 4) {
+                cntCk.style.display = 'block';
+            }
+        }
+        function toggleBtn4() {
+            const merit = document.getElementById('merit4');
+            if(merit.style.display !== 'none') {
+                merit.style.display = 'none';
+                number = '0';
+            }
+            else {
+                if (number != '0') {
+                    var tmp = "merit" + number;
+                    const trash = document.getElementById(tmp);
+                    trash.style.display = 'none';
+                }
+                if (ck4 == 0) {
+                    ck4 = 1;
+                    cnt++;
+                }
+                merit.style.display = 'block';
+                number = '4';
+            }
+            if (cnt == 4) {
+                cntCk.style.display = 'block';
+            }
+        }
+
+
+    var div2 = document.getElementsByClassName("btn");
+
+      function handleClick(event) {
+        if (event.target.classList[1] === "clicked") {
+          event.target.classList.remove("clicked");
+        } else {
+          for (var i = 0; i < div2.length; i++) {
+            div2[i].classList.remove("clicked");
+          }
+
+          event.target.classList.add("clicked");
+        }
+      }
+
+      function init() {
+        for (var i = 0; i < div2.length; i++) {
+          div2[i].addEventListener("click", handleClick);
+        }
+      }
+
+      init();
+    </script>
+    
+</body>
+</html>

@@ -82,6 +82,22 @@ img {
    border-bottom: 5px solid #DDECCA;
 }
 
+.bottom_explain {
+   text-align: left;
+   margin-top: 80px;
+   width: 100vw;
+   min-width: 350px;
+   border-top: 5px solid #DDECCA;
+   border-bottom: 5px solid #DDECCA;
+}
+
+.bottom_explain h2 {
+   margin: 20px;
+   font-size: 10px;
+   color: #8e8e8e;
+   font-family: GangwonEdu_OTFBoldA;
+}
+
 .text-center {
    display:block;
    margin:auto;

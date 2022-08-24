@@ -21,8 +21,15 @@
         font-style: normal;
         }
     </style>
+    <script>
+        function play(){
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
 </head>
 <body>
+    <audio src="bgm.mp3" id = "audio"></audio>
     <div class = "title">
         <h2><strong>독서의 이점</strong></h2>
     </div>
@@ -102,6 +109,9 @@
             if (cnt == 4) {
                 cntCk.style.display = 'block';
             }
+            else if (cnt == 1) {
+                play();
+            }
         }
         function toggleBtn2() {
             const merit = document.getElementById('merit2');
@@ -124,6 +134,9 @@
             }
             if (cnt == 4) {
                 cntCk.style.display = 'block';
+            }
+            else if (cnt == 1) {
+                play();
             }
         }
         function toggleBtn3() {
@@ -148,6 +161,9 @@
             if (cnt == 4) {
                 cntCk.style.display = 'block';
             }
+            else if (cnt == 1) {
+                play();
+            }
         }
         function toggleBtn4() {
             const merit = document.getElementById('merit4');
@@ -170,6 +186,9 @@
             }
             if (cnt == 4) {
                 cntCk.style.display = 'block';
+            }
+            else if (cnt == 1) {
+                play();
             }
         }
 

@@ -270,3 +270,10 @@ html{
     font-size: 1.5rem;
     color: #373737;
 }
+
+.test_explain {
+    font-family: 'Cafe24Oneprettynight';
+    margin-top: 50px;
+    font-size: 10px;
+    color: rgb(88, 88, 88);
+}

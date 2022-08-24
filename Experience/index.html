@@ -21,16 +21,28 @@
         font-style: normal;
     }
     </style>
+    <script>
+        function play(){
+            var audio = document.getElementById("audio");
+            audio.play();
+            document.getElementById('btn1').style.visibility = 'hidden'
+            flag++
+            document.getElementById('btn').style.visibility = 'visible'
+        }
+    </script>
 </head>
 <body>
+    <audio src="bgm.mp3" id = "audio"></audio>
     <div class="container">
         <div class="balloon">
             <div id="box"><div id="st_text">My turning point</div></div>
         </div>
         <div class="btn_c">
+            <button id = "btn1" onclick = "play(); func();">시작!</button>
             <button id="btn">다음</button>
         <a href="https://hwannow.github.io/Html-Web/main/"><button id = "btn2">처음으로</button></a>
     <script>
+        document.getElementById('btn').style.visibility = 'hidden'
         document.getElementById('btn2').style.visibility = 'hidden'
         var ary = []
         ary[0] = "여러분들은 친구와 크게 싸워, 끝내 연을 끊은 경험이 있나요?"
